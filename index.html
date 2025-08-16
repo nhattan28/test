@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu cầu thanh toán</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tạo yêu cầu thanh toán</h1>
+        <form id="payment-request-form">
+            <div class="form-group">
+                <label for="debtor-name">Tên người nhận:</label>
+                <input type="text" id="debtor-name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Số tiền (VNĐ):</label>
+                <input type="number" id="amount" required min="1000">
+            </div>
+            <div class="form-group">
+                <label for="reason">Lý do:</label>
+                <textarea id="reason" rows="3" required></textarea>
+            </div>
+            <button type="submit">Tạo yêu cầu</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Đã tạo yêu cầu thành công!</h2>
+            <p>Bạn có thể chia sẻ đường link này với người nhận:</p>
+            <div class="result-box">
+                <p id="share-link"></p>
+                <button id="copy-button">Sao chép</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
